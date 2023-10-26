@@ -1,5 +1,6 @@
 package com.Catalog.Service.service.ServiceImpl;
 import com.Catalog.Service.dto.GrainDto;
+import com.Catalog.Service.feign.CartServiceFeignClient;
 import com.Catalog.Service.service.CatalogService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,10 @@ public class CatalogServiceImpl implements CatalogService {
 
     private final GrainRepository grainRepository;
 
-
     @Autowired
     public CatalogServiceImpl(GrainRepository grainRepository) {
         this.grainRepository = grainRepository;
+
     }
 
     @Override
